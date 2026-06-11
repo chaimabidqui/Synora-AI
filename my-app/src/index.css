@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:wght@100;200;300&display=swap');
+
+body {
+  min-height: 100%;
+    background-color: rgb(244, 245, 248);
+    font-family:'Poppins', 'Raleway', sans-serif;
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Scrolls upward — default column */
+@keyframes testimonials-marquee-up {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, -50%, 0); }
+}
+
+/* Scrolls downward — reverse column */
+@keyframes testimonials-marquee-down {
+  0%   { transform: translate3d(0, -50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.testimonial-marquee {
+  animation-name: testimonials-marquee-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee-reverse {
+  animation-name: testimonials-marquee-down;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.testimonial-marquee:hover,
+.testimonial-marquee-reverse:hover {
+  animation-play-state: paused;
+}
