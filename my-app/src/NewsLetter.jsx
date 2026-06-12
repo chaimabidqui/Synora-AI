@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useRef, useEffect } from "react";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
+import Bg2 from './assets/Bg2.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -41,7 +41,7 @@ export default function NewsletterSection() {
     <section
       className="relative flex min-h-[620px] sm:min-h-[820px] items-center justify-center overflow-hidden px-5 py-16 sm:px-8 lg:px-14"
       style={{
-        backgroundImage: "url('/src/assets/Bg2.png')",
+        backgroundImage: `url(${Bg2})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
